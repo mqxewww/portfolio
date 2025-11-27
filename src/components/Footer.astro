@@ -1,32 +1,33 @@
 ---
-// assets
-import GitHubSVG from "~assets/svgs/github.svg";
+import { Image } from "astro:assets";
 ---
 
-<footer class="space-y-2 py-4">
-  <div class="flex justify-center space-x-6">
+<footer
+  class="flex w-full flex-col items-center justify-center p-2 text-sm text-zinc-400 lg:pt-4"
+>
+  <div class="mb-2 flex space-x-4">
     <a
-      class="text-gray-500 hover:text-white transition-colors duration-500 ease-in-out"
-      href="https://github.com/mqxewww"
+      href="https://www.linkedin.com/in/maxence-noizet-2a4a2526b/"
       target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Lien vers mon profil GitHub."
     >
-      <GitHubSVG class="h-8 lg:h-12" fill="currentColor" />
+      <Image
+        width="28"
+        height="28"
+        src="https://skillicons.dev/icons?i=linkedin"
+        alt="linkedin"
+        loading="eager"
+      />
+    </a>
+    <a href="https://github.com/mqxewww" target="_blank">
+      <Image
+        width="28"
+        height="28"
+        src="https://skillicons.dev/icons?i=github"
+        alt="github"
+        loading="eager"
+      />
     </a>
   </div>
-  <div class="space-y-1 text-xs lg:text-base text-center text-gray-300">
-    <p>© Maxence 'mqxewww' NOIZET 2023-present</p>
-    <p>
-      Contenu sous copyright.
-      <a
-        class="hover:text-yellow-400 transition-colors duration-700 ease-in-out"
-        href="https://github.com/mqxewww/portfolio"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Code disponible sous licence MIT.
-      </a>
-    </p>
-  </div>
+  <p>© Maxence 'mqxewww' NOIZET 2025</p>
+  <p>Code disponible sur GitHub.</p>
 </footer>

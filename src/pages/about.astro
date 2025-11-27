@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import Layout from "~layouts/Layout.astro";
+---
+
+<Layout
+  page="À propos"
+  description="Qui je suis, quelles sont mes expériences, mes compétences, et mes passions."
+>
+  <div
+    class="flex max-w-4xl flex-col items-center space-y-12 px-4 py-20 text-justify text-zinc-200 md:px-8 lg:text-lg"
+  >
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-emerald-400 md:text-4xl">
+        Qui je suis et mes expériences
+      </h2>
+      <p>
+        Je m'appelle Maxence NOIZET, j'ai 23 ans, et je suis originaire des
+        Ardennes. Je poursuis actuellement un Master en Sciences Informatiques à
+        l'école Epitech, avec une spécialisation en Intelligence Artificielle et
+        Data.
+      </p>
+      <p>
+        Passionné par l'informatique depuis mon enfance, j'ai découvert le code
+        au collège, en 4ème, grâce à ma passion pour les jeux vidéos.
+      </p>
+      <p>
+        En <span class="text-emerald-200">janvier 2022</span>, j'ai eu la chance
+        de faire un stage en full-remote pour une startup chinoise basée à Pékin
+        🇨🇳. Ce stage m'a appris de devenir un travailleur organisé et autonome,
+        notamment dû au décalage horaire de 8 heures.
+      </p>
+      <p>
+        Durant <span class="text-emerald-200">l'année scolaire 2022-2023</span>,
+        lors de ma première année en alternance, j'ai rejoint une jeune startup
+        qui développait des applications SaaS, notamment pour des coopératives
+        agricoles telles que Vivescia et Cérèsia.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-emerald-400 md:text-4xl">
+        Mes compétences
+      </h2>
+      <p>
+        À travers mes projets scolaires, personnels et professionnels, j'ai
+        acquis de solides compétences sur plusieurs langages de programmation,
+        frameworks, base de données, et outils annexes.
+      </p>
+      <div class="flex flex-col justify-center space-y-4">
+        <a
+          href="https://skillicons.dev/"
+          target="_blank"
+          class="flex justify-center"
+        >
+          <Image
+            width="400"
+            height="1"
+            src="https://skillicons.dev/icons?i=html,css,tailwindcss,javascript,typescript,php"
+            alt="skills-row-1"
+            loading="eager"
+            class="rounded-lg shadow-md"
+          />
+        </a>
+        <a
+          href="https://skillicons.dev/"
+          target="_blank"
+          class="flex justify-center"
+        >
+          <Image
+            width="700"
+            height="1"
+            src="https://skillicons.dev/icons?i=symfony,vuejs,vite,nextjs,nestjs,mysql,mongodb,docker,webstorm,phpstorm,github"
+            alt="skills-row-2"
+            loading="eager"
+            class="rounded-lg shadow-md"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-3xl font-bold text-emerald-400 md:text-4xl">
+        Mes passions
+      </h2>
+      <p>
+        En dehors du code, je suis un passionné de jeux vidéo. Il y a quelques
+        années, je jouais beaucoup à des FPS tels que PUBG, Apex Legends et
+        CSGO. Plus récemment, je me tourne vers des jeux solo comme ceux de
+        FromSoftware, notamment Dark Souls I et III, Elden Ring, et très
+        récemment Clair Obscur : Expedition 33. Tous ces jeux sont des jeux que
+        j'ai plus ou moins
+        <a
+          href="https://www.speedrun.com/users/mqxewww"
+          target="_blank"
+          class="text-emerald-400 underline underline-offset-4 transition-all duration-300 hover:brightness-150"
+          >speedrun</a
+        >, et j'ai également participé à des tournois en ligne diffusés sur
+        <a
+          href="https://www.twitch.tv/mqxewww"
+          target="_blank"
+          class="text-emerald-400 underline underline-offset-4 transition-all duration-300 hover:brightness-150"
+          >Twitch</a
+        >.
+      </p>
+    </section>
+  </div>
+</Layout>

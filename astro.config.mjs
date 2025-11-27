@@ -1,14 +1,13 @@
+// @ts-check
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
+// https://astro.build/config
 export default defineConfig({
   site: "https://mqxewww.dev",
-  integrations: [
-    tailwind(),
-    sitemap({ filter: (page) => !page.startsWith("https://mqxewww.dev/static") })
-  ],
-  experimental: {
-    svg: true
-  }
+  integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

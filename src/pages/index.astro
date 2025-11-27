@@ -1,36 +1,68 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "~layouts/Layout.astro";
 ---
 
-<Layout page="Accueil" description="Portfolio de Maxence 'mqxewww' NOIZET, développeur web.">
-  <div class="opacity-0 animate-fadeIn text-center space-y-8 lg:space-y-20">
-    <div class="space-y-4 text-4xl lg:text-7xl">
-      <p>Bonjour <span class="waving-hand">👋</span></p>
-      <p>Je m'appelle <span class="text-yellow-400">Maxence</span>.</p>
+<Layout
+  page="Accueil"
+  description="Portfolio de Maxence NOIZET, étudiant en sciences informatiques."
+>
+  <div
+    class="flex flex-col items-center p-4 pt-12 md:flex-row md:justify-between md:p-8"
+  >
+    <div
+      class="flex max-w-2xl flex-col items-center space-y-6 text-center text-zinc-200 md:items-start md:text-left"
+    >
+      <div class="space-y-2">
+        <p class="text-lg font-semibold md:text-2xl">
+          Bonjour
+          <span
+            class="inline-block origin-bottom animate-[wave_3s_infinite] text-xl md:text-3xl"
+          >
+            👋
+          </span>
+        </p>
+        <p class="text-2xl font-bold md:text-4xl">
+          Je m'appelle <span class="text-emerald-400">Maxence</span>.
+        </p>
+      </div>
+      <div class="space-y-3 text-sm leading-relaxed md:text-lg">
+        <p>
+          Étudiant 🇫🇷 de 23 ans en Master 1 de Sciences Informatiques, je suis
+          passionné par le développement d'applications et les nouvelles
+          technologies.
+        </p>
+        <p>Parcourez mon portfolio pour en savoir plus sur moi.</p>
+      </div>
     </div>
-    <div class="space-y-4 text-lg lg:text-2xl">
-      <p>
-        Développeur français de 22 ans et diplômé d'un bachelor
-        <span class="text-yellow-400">Concepteur Développeur d'Applications</span>, je suis
-        passionné par le développement web et backend.
-      </p>
-      <p>
-        Parcourez mon portfolio pour en savoir plus sur moi, ainsi que sur les projets auxquels j'ai
-        participé. Contact : <span class="text-yellow-400">noizetmaxence@pm.me</span>
-      </p>
+
+    <div class="mt-6 md:mt-0 md:ml-8">
+      <div class="hidden md:flex">
+        <Image
+          width="400"
+          height="400"
+          src="https://avatars.githubusercontent.com/u/89202276"
+          alt="github-profile"
+          class="mx-auto rounded-full border-4 border-emerald-400 shadow-lg"
+          loading="eager"
+        />
+      </div>
+      <div class="flex md:hidden">
+        <Image
+          width="200"
+          height="200"
+          src="https://avatars.githubusercontent.com/u/89202276"
+          alt="github-profile"
+          class="mx-auto rounded-full border-4 border-emerald-400 shadow-lg"
+          loading="eager"
+        />
+      </div>
     </div>
   </div>
 </Layout>
-<style>
-  .waving-hand {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
 
-  @keyframes wave-animation {
+<style>
+  @keyframes wave {
     0% {
       transform: rotate(0deg);
     }
@@ -40,17 +72,14 @@ import Layout from "~layouts/Layout.astro";
     30% {
       transform: rotate(-8deg);
     }
-    40% {
+    45% {
       transform: rotate(14deg);
     }
-    50% {
+    60% {
       transform: rotate(-4deg);
     }
-    60% {
+    75% {
       transform: rotate(10deg);
-    }
-    70% {
-      transform: rotate(0deg);
     }
     100% {
       transform: rotate(0deg);

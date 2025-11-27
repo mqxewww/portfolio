@@ -1,12 +1,38 @@
-# My portfolio <img href="https://github.com/mqxewww/portfolio" src="https://avatars.githubusercontent.com/u/89202276?v=4" width="80px" alt="Github profile picture" align="right">
+<div align="center">
+    <img src="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/public/apple-touch-icon-192x192.png" alt="SelectionQX Logo" width="256">
+    <br>
+    <h1>Portfolio</h1>
+</div>
 
-## Description :pencil2:
+<h4 align="center">My portfolio built with Astro.</h4>
 
-My Portfolio built with Astro. It is available [here](https://mqxewww.dev).
+<div align="center">
 
-## More about my portfolio :memo:
+[![Main Stack](https://skillicons.dev/icons?i=bun,vite,astro,tailwindcss)](https://skillicons.dev)
 
-[![Top language](https://img.shields.io/github/languages/top/mqxewww/portfolio?color=FA9C1B&style=for-the-badge)](https://github.com/mqxewww/portfolio/search?l=astro)
-[![License](https://img.shields.io/github/license/mqxewww/portfolio?style=for-the-badge)](https://github.com/mqxewww/portfolio/blob/main/LICENSE.md)
+</div>
 
-~ Maxence 'mqxewww' NOIZET 2023-present
+## How To Use
+
+To run this application, you will
+need [Bun](https://bun.com/docs/installation). When it is installed, you can run from your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/mqxewww/portfolio.git
+
+# Install dependencies
+$ bun install
+
+# Run the app
+$ bun -b run dev
+```
+
+---
+<div align="center">
+
+Portfolio [mqxewww.dev](https://mqxewww.dev/) •
+LinkedIn [@maxence-noizet-2a4a2526b](https://linkedin.com/in/maxence-noizet-2a4a2526b) •
+GitHub [@mqxewww](https://github.com/mqxewww)
+
+</div>

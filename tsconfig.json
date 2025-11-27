@@ -4,8 +4,9 @@
     "paths": {
       "~assets/*": ["src/assets/*"],
       "~components/*": ["src/components/*"],
-      "~constants/*": ["src/constants/*"],
-      "~layouts/*": ["src/layouts/*"]
+      "~layouts/*": ["src/layouts/*"],
+      "~styles/*": ["src/styles/*"],
+      "~/*": ["src/*"]
     }
   },
   "extends": "astro/tsconfigs/strict",

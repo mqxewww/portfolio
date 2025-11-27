@@ -1,7 +1,8 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import Footer from "~components/Footer.astro";
-import Navbar from "~components/Navbar/Navbar.astro";
+import Header from "~components/Header.astro";
+import "~styles/global.css";
 
 interface Props {
   page: string;
@@ -10,54 +11,60 @@ interface Props {
 
 const { page, description } = Astro.props;
 
-const title = `${page} · mqxewww's portfolio`;
+const title = `${page} | Portfolio`;
 ---
 
 <!doctype html>
 <html lang="fr">
   <head>
-    <link rel="stylesheet" href="/font.css" />
-    <!-- High Priority Global Metadata -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <meta name="generator" content="Astro v5.0.5" />
-    <!-- Low Priority Global Metadata -->
-    <link rel="icon" type="image/jpeg" href="https://avatars.githubusercontent.com/u/89202276" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link rel="canonical" href={`https://mqxewww.dev${Astro.url.pathname}`} />
     <meta name="description" content={description} />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-192x192.png" />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <meta property="og:title" content={title} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={`https://mqxewww.dev${Astro.url.pathname}`} />
-    <meta property="og:locale" content="fr_FR" />
     <meta property="og:description" content={description} />
-    <meta property="og:site_name" content={title} />
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/89202276" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:site" content="@mqxewww" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/89202276" />
-    <meta name="robots" content="max-image-preview:large" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content={`https://mqxewww.dev${Astro.url.pathname}`}
+    />
+    <meta property="og:locale" content="fr_FR" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/src/assets/icon.png"
+    />
+    <meta property="og:site_name" content="mqxewww.dev" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mqxewww" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/src/assets/icon.png"
+    />
+
     <ClientRouter />
   </head>
-  <body class="h-screen flex flex-col justify-between mx-4 lg:mx-60 bg-slate-950 text-white">
-    <Navbar />
-    <slot />
+  <body
+    class="flex min-h-screen flex-col bg-zinc-900 bg-linear-to-tl from-zinc-900 to-zinc-800"
+  >
+    <Header />
+    <main class="flex w-full flex-1 items-center justify-center">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
-<style is:global>
-  body {
-    font-family: "Montserrat", sans-serif;
-  }
-
-  html {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  html::-webkit-scrollbar {
-    display: none;
-  }
-</style>

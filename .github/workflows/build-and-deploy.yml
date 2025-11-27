@@ -1,25 +1,24 @@
-name: Build and Deploy app to GitHub Pages
+name: Build and Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Bun
-        uses: oven-sh/setup-bun@v1
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          bun-version: "latest"
+          bun-version: latest
 
       - name: Install dependencies
-        run: bun install --production
+        run: bun install --frozen-lockfile
 
       - name: Build Astro app
         run: bun run build
