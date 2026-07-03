@@ -12,7 +12,7 @@
     "editor.formatOnSave": true
   },
   "eslint.workingDirectories": ["."],
-  "eslint.validate": ["typescript", "astro"],
+  "eslint.validate": ["astro", "typescript"],
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true

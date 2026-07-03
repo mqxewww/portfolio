@@ -25,10 +25,11 @@ $ git clone https://github.com/mqxewww/portfolio.git
 $ bun install
 
 # Run the app
-$ bun -b run dev
+$ bun run dev
 ```
 
 ---
+
 <div align="center">
 
 Portfolio [mqxewww.dev](https://mqxewww.dev/) •

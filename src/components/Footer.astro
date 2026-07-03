@@ -8,6 +8,7 @@ import { Image } from "astro:assets";
       <Image
         width="28"
         height="28"
+        layout="none"
         src="https://skillicons.dev/icons?i=linkedin"
         alt="linkedin"
         loading="eager"
@@ -17,12 +18,13 @@ import { Image } from "astro:assets";
       <Image
         width="28"
         height="28"
+        layout="none"
         src="https://skillicons.dev/icons?i=github"
         alt="github"
         loading="eager"
       />
     </a>
   </div>
-  <p>© Maxence 'mqxewww' NOIZET 2025</p>
+  <p>© Maxence 'mqxewww' NOIZET {new Date().getFullYear()}</p>
   <p>Code disponible sur GitHub.</p>
 </footer>
