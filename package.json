@@ -5,13 +5,17 @@
   "private": true,
   "license": "MIT",
   "type": "module",
+  "engines": {
+    "bun": ">=1.3.13"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint \"**/*.{js,mjs,ts,astro,css,json}\"",
-    "format": "prettier --write \"**/*.{js,mjs,ts,css,json}\" && prettier --write \"**/*.astro\" --parser astro"
+    "lint": "astro check && bunx eslint \"**/*.{js,ts,astro,css,json}\"",
+    "lint:fix": "bunx eslint \"**/*.{js,ts,astro,css,json}\" --fix",
+    "format": "prettier --write \"**/*.{js,ts,css,json}\" && prettier --write \"**/*.astro\" --parser astro"
   },
   "author": {
     "name": "Maxence 'mqxewww' NOIZET",
@@ -23,19 +27,39 @@
     "url": "https://github.com/mqxewww/portfolio.git"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.16.1"
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.18.2"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.1.17",
-    "@types/bun": "^1.3.3",
-    "@typescript-eslint/parser": "^8.48.0",
-    "eslint": "^9.39.1",
-    "eslint-plugin-astro": "^1.5.0",
-    "prettier": "^3.6.2",
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/bun": "latest",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^1.7.0",
+    "prettier": "^3.9.4",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.1",
-    "tailwindcss": "^4.1.17",
-    "typescript-eslint": "^8.48.0"
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.7.4",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.1"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 100,
+    "plugins": [
+      "prettier-plugin-organize-imports",
+      "prettier-plugin-astro",
+      "prettier-plugin-tailwindcss"
+    ],
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ]
   }
 }

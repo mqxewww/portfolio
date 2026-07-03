@@ -36,10 +36,7 @@ const title = `${page} | Portfolio`;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content={`https://mqxewww.dev${Astro.url.pathname}`}
-    />
+    <meta property="og:url" content={`https://mqxewww.dev${Astro.url.pathname}`} />
     <meta property="og:locale" content="fr_FR" />
     <meta
       property="og:image"
@@ -58,9 +55,7 @@ const title = `${page} | Portfolio`;
 
     <ClientRouter />
   </head>
-  <body
-    class="flex min-h-screen flex-col bg-zinc-900 bg-linear-to-tl from-zinc-900 to-zinc-800"
-  >
+  <body class="flex min-h-screen flex-col bg-zinc-900 bg-linear-to-tl from-zinc-900 to-zinc-800">
     <Header />
     <main class="flex w-full flex-1 items-center justify-center">
       <slot />
