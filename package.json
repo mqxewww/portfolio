@@ -6,20 +6,21 @@
   "license": "MIT",
   "type": "module",
   "engines": {
-    "bun": ">=1.3.13"
+    "bun": ">=1.4.2"
   },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "astro check && bunx eslint \"**/*.{js,ts,astro,css,json}\"",
-    "lint:fix": "bunx eslint \"**/*.{js,ts,astro,css,json}\" --fix",
-    "format": "prettier --write \"**/*.{js,ts,css,json}\" && prettier --write \"**/*.astro\" --parser astro"
+    "lint": "astro check && eslint \"**/*.{js,ts,astro}\"",
+    "lint:fix": "eslint \"**/*.{js,ts,astro}\" --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "author": {
     "name": "Maxence 'mqxewww' NOIZET",
-    "email": "noizetmaxence@pm.me",
+    "email": "noizetmaxence@proton.me",
     "url": "https://github.com/mqxewww"
   },
   "repository": {
@@ -27,27 +28,28 @@
     "url": "https://github.com/mqxewww/portfolio.git"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@astrojs/sitemap": "^3.7.3",
-    "astro": "^7.0.6"
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.2"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.2",
-    "@types/bun": "^1.3.14",
-    "eslint": "^10.6.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/bun": "^1.4.2",
+    "eslint": "^10.10.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-astro": "^2.1.1",
-    "prettier": "^3.9.4",
-    "prettier-plugin-astro": "^0.14.1",
+    "eslint-plugin-astro": "^3.2.0",
+    "prettier": "^3.9.7",
+    "prettier-plugin-astro": "^1.0.0",
     "prettier-plugin-organize-imports": "^4.3.0",
-    "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4.3.2",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.1"
+    "typescript-eslint": "^8.70.0"
   },
   "prettier": {
     "singleQuote": false,
     "printWidth": 100,
+    "endOfLine": "crlf",
     "plugins": [
       "prettier-plugin-organize-imports",
       "prettier-plugin-astro",

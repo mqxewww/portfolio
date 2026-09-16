@@ -1,0 +1,4 @@
+* text=auto eol=crlf
+
+# Binary files should not be normalized
+*.png binary
