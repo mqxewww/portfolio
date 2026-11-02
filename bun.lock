@@ -5,13 +5,12 @@
     "": {
       "name": "portfolio",
       "dependencies": {
-        "@astrojs/check": "^0.9.12",
         "@astrojs/sitemap": "^3.7.4",
         "astro": "^7.4.5",
       },
       "devDependencies": {
+        "@astrojs/check": "^0.9.12",
         "@tailwindcss/vite": "^4.3.3",
-        "@types/bun": "^1.4.4",
         "eslint": "^10.14.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-astro": "^3.2.1",
@@ -306,8 +305,6 @@
 
     "@tybys/wasm-util": ["@tybys/wasm-util@0.10.4", "", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A=="],
 
-    "@types/bun": ["@types/bun@1.4.4", "", { "dependencies": { "bun-types": "1.4.4" } }, "sha512-9wkRDXUXK124pEnAutE6n/l18j+i9GC5IAHK8TmX/2nlySETmky0OU6yL5U8pW1AoKh++AN9auDCr647BfurjQ=="],
-
     "@types/esrecurse": ["@types/esrecurse@4.3.1", "", {}, "sha512-xJBAbDifo5hpffDBuHl0Y8ywswbiAp/Wi7Y/GtAgSlZyIABppyurxVueOPE8LUQOxdlgi6Zqce7uoEpqNTeiUw=="],
 
     "@types/estree": ["@types/estree@1.0.9", "", {}, "sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg=="],
@@ -399,8 +396,6 @@
     "boolbase": ["boolbase@1.0.0", "", {}, "sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww=="],
 
     "brace-expansion": ["brace-expansion@5.0.12", "", { "dependencies": { "balanced-match": "^4.0.2" } }, "sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ=="],
-
-    "bun-types": ["bun-types@1.4.4", "", { "dependencies": { "@types/node": "*", "undici-types": "*" } }, "sha512-yjrJh5oGX7mMPKGd19YXyIjmEuj4G4zNC30bs7PM9Az7NQ3ndF3j6hbeRdvJTRQEhJ/FYQwW0a2moweEi2hMxQ=="],
 
     "cacheable": ["cacheable@2.5.0", "", { "dependencies": { "@cacheable/memory": "^2.2.0", "@cacheable/utils": "^2.5.0", "hookified": "^1.15.0", "keyv": "^5.6.0", "qified": "^0.10.1" } }, "sha512-60cyAOytib/OzBw1JNSoSV/boK1AtHryDIjvVBk7XbN4ugfkM3+Sry7fEjNgPMGgOjuaZPAp8ruZ0Cxafwyq9g=="],
 
