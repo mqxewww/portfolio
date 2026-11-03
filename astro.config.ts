@@ -14,7 +14,7 @@ export default defineConfig({
     csp: {
       directives: [
         "default-src 'self'",
-        "img-src 'self' https://skillicons.dev data:",
+        "img-src 'self' data:",
         "base-uri 'self'",
         "object-src 'none'",
       ],
@@ -26,7 +26,7 @@ export default defineConfig({
   },
   image: {
     layout: "constrained",
-    domains: ["avatars.githubusercontent.com", "raw.githubusercontent.com"],
+    domains: ["avatars.githubusercontent.com"],
   },
   fonts: [
     {

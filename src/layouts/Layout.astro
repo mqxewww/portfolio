@@ -1,9 +1,10 @@
 ---
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
-import Footer from "~components/Footer.astro";
-import Header from "~components/Header.astro";
-import "~styles/global.css";
+import icon from "~/assets/icon.png";
+import Footer from "~/components/Footer.astro";
+import Header from "~/components/Header.astro";
+import "~/styles/global.css";
 
 interface Props {
   page: string;
@@ -13,6 +14,8 @@ interface Props {
 const { page, description } = Astro.props;
 
 const title = `${page} | Portfolio`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(icon.src, Astro.site);
 ---
 
 <!doctype html>
@@ -24,7 +27,7 @@ const title = `${page} | Portfolio`;
 
     <Font cssVariable="--font-montserrat" preload />
 
-    <link rel="canonical" href={`https://mqxewww.dev${Astro.url.pathname}`} />
+    <link rel="canonical" href={canonicalURL} />
     <meta name="description" content={description} />
     <meta
       name="robots"
@@ -39,22 +42,16 @@ const title = `${page} | Portfolio`;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`https://mqxewww.dev${Astro.url.pathname}`} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:locale" content="fr_FR" />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/src/assets/icon.png"
-    />
+    <meta property="og:image" content={imageURL} />
     <meta property="og:site_name" content="mqxewww.dev" />
 
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@mqxewww" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta
-      name="twitter:image"
-      content="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/src/assets/icon.png"
-    />
+    <meta name="twitter:image" content={imageURL} />
 
     <ClientRouter />
   </head>

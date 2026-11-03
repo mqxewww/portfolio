@@ -6,12 +6,3 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-html {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-html::-webkit-scrollbar {
-  display: none;
-}
