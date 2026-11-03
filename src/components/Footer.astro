@@ -1,30 +1,31 @@
 ---
-import { Image } from "astro:assets";
+import GitHub from "~/assets/icons/github.svg";
+import LinkedIn from "~/assets/icons/linkedin.svg";
 ---
 
 <footer class="flex w-full flex-col items-center justify-center p-2 text-sm text-zinc-400 lg:pt-4">
   <div class="mb-2 flex space-x-4">
-    <a href="https://www.linkedin.com/in/maxence-noizet-2a4a2526b/" target="_blank">
-      <Image
-        width="28"
-        height="28"
-        layout="none"
-        src="https://skillicons.dev/icons?i=linkedin"
-        alt="linkedin"
-        loading="eager"
-      />
+    <a
+      href="https://www.linkedin.com/in/maxence-noizet-2a4a2526b/"
+      target="_blank"
+      aria-label="LinkedIn"
+    >
+      <LinkedIn class="size-7" aria-hidden="true" />
     </a>
-    <a href="https://github.com/mqxewww" target="_blank">
-      <Image
-        width="28"
-        height="28"
-        layout="none"
-        src="https://skillicons.dev/icons?i=github"
-        alt="github"
-        loading="eager"
-      />
+    <a href="https://github.com/mqxewww" target="_blank" aria-label="GitHub">
+      <GitHub class="size-7" aria-hidden="true" />
     </a>
   </div>
   <p>© Maxence 'mqxewww' NOIZET {new Date().getFullYear()}</p>
-  <p>Code disponible sur GitHub.</p>
+  <p>
+    Code disponible sur{" "}
+    <a
+      href="https://github.com/mqxewww/portfolio"
+      target="_blank"
+      class="underline underline-offset-4 transition-all duration-300 hover:brightness-150"
+    >
+      GitHub
+    </a>
+    .
+  </p>
 </footer>

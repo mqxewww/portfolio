@@ -1,30 +1,68 @@
 ---
-import { Image } from "astro:assets";
+import Css from "~/assets/icons/css.svg";
+import Docker from "~/assets/icons/docker.svg";
+import GitHub from "~/assets/icons/github.svg";
+import Html from "~/assets/icons/html.svg";
+import JavaScript from "~/assets/icons/javascript.svg";
+import MongoDB from "~/assets/icons/mongodb.svg";
+import MySQL from "~/assets/icons/mysql.svg";
+import NestJS from "~/assets/icons/nestjs.svg";
+import NextJS from "~/assets/icons/nextjs.svg";
+import Php from "~/assets/icons/php.svg";
+import PhpStorm from "~/assets/icons/phpstorm.svg";
+import Symfony from "~/assets/icons/symfony.svg";
+import TailwindCSS from "~/assets/icons/tailwindcss.svg";
+import TypeScript from "~/assets/icons/typescript.svg";
+import Vite from "~/assets/icons/vite.svg";
+import VueJS from "~/assets/icons/vuejs.svg";
+import WebStorm from "~/assets/icons/webstorm.svg";
 import Layout from "~/layouts/Layout.astro";
+
+const skills = [
+  { name: "HTML", Icon: Html },
+  { name: "CSS", Icon: Css },
+  { name: "Tailwind CSS", Icon: TailwindCSS },
+  { name: "JavaScript", Icon: JavaScript },
+  { name: "TypeScript", Icon: TypeScript },
+  { name: "PHP", Icon: Php },
+  { name: "Symfony", Icon: Symfony },
+  { name: "Vue.js", Icon: VueJS },
+  { name: "Vite", Icon: Vite },
+  { name: "Next.js", Icon: NextJS },
+  { name: "NestJS", Icon: NestJS },
+  { name: "MySQL", Icon: MySQL },
+  { name: "MongoDB", Icon: MongoDB },
+  { name: "Docker", Icon: Docker },
+  { name: "WebStorm", Icon: WebStorm },
+  { name: "PhpStorm", Icon: PhpStorm },
+  { name: "GitHub", Icon: GitHub },
+];
 ---
 
 <Layout
   page="À propos"
   description="Qui je suis, quelles sont mes expériences, mes compétences, et mes passions."
 >
-  <div class="flex max-w-4xl flex-col items-center space-y-12 px-4 py-20 text-justify text-zinc-200 md:px-8 lg:text-lg">
+  <div class="flex max-w-4xl flex-col items-center space-y-12 px-4 py-20 text-zinc-200 md:px-8 lg:text-justify lg:text-lg">
+    <h1 class="sr-only">À propos</h1>
+
     <section class="space-y-4">
       <h2 class="text-3xl font-bold text-emerald-400 md:text-4xl">
         Qui je suis et mes expériences
       </h2>
       <p>
-        Je m'appelle Maxence NOIZET, j'ai 24 ans, et je suis originaire des Ardennes. Je poursuis
-        actuellement un Master en Sciences Informatiques à l'école Epitech, avec une spécialisation
-        en Intelligence Artificielle et Data.
+        Je m'appelle Maxence NOIZET, j'ai 24 ans, et je suis originaire des Ardennes. Je suis
+        actuellement en deuxième année de Master of Science à Epitech, option Intelligence
+        Artificielle & Data.
       </p>
       <p>
         Passionné par l'informatique depuis mon enfance, j'ai découvert le code au collège, en 4ème,
-        grâce à ma passion pour les jeux vidéos.
+        grâce à ma passion pour les jeux vidéo.
       </p>
       <p>
         En <span class="text-emerald-200">janvier 2022</span>, j'ai eu la chance de faire un stage
-        en full-remote pour une startup chinoise basée à Pékin 🇨🇳. Ce stage m'a appris de devenir un
-        travailleur organisé et autonome, notamment dû au décalage horaire de 8 heures.
+        en full-remote pour une startup chinoise basée à Pékin 🇨🇳. Ce stage m'a appris à devenir un
+        travailleur organisé et autonome, notamment en raison du décalage horaire de 8 heures.
       </p>
       <p>
         Durant <span class="text-emerald-200">l'année scolaire 2022-2023</span>, lors de ma première
@@ -37,40 +75,23 @@ import Layout from "~/layouts/Layout.astro";
       <h2 class="text-3xl font-bold text-emerald-400 md:text-4xl">Mes compétences</h2>
       <p>
         À travers mes projets scolaires, personnels et professionnels, j'ai acquis de solides
-        compétences sur plusieurs langages de programmation, frameworks, base de données, et outils
+        compétences sur plusieurs langages de programmation, frameworks, bases de données, et outils
         annexes.
       </p>
-      <div class="flex flex-col justify-center space-y-4">
-        <a href="https://skillicons.dev/" target="_blank" class="flex justify-center">
-          <Image
-            width="400"
-            height="1"
-            layout="none"
-            src="https://skillicons.dev/icons?i=html,css,tailwindcss,javascript,typescript,php"
-            alt="skills-row-1"
-            loading="eager"
-            class="rounded-lg shadow-md"
-          />
-        </a>
-        <a href="https://skillicons.dev/" target="_blank" class="flex justify-center">
-          <Image
-            width="700"
-            height="1"
-            layout="none"
-            src="https://skillicons.dev/icons?i=symfony,vuejs,vite,nextjs,nestjs,mysql,mongodb,docker,webstorm,phpstorm,github"
-            alt="skills-row-2"
-            loading="eager"
-            class="rounded-lg shadow-md"
-          />
-        </a>
-      </div>
+      <ul class="flex flex-wrap justify-center gap-2.5">
+        {skills.map(({ name, Icon }) => (
+          <li title={name}>
+            <Icon class="size-14 drop-shadow-md" role="img" aria-label={name} />
+          </li>
+        ))}
+      </ul>
     </section>
 
     <section class="space-y-4">
       <h2 class="text-3xl font-bold text-emerald-400 md:text-4xl">Mes passions</h2>
       <p>
         En dehors du code, je suis un passionné de jeux vidéo. Il y a quelques années, je jouais
-        beaucoup à des FPS tels que PUBG, Apex Legends et CSGO. Plus récemment, je me tourne vers
+        beaucoup à des FPS tels que PUBG, Apex Legends et CS:GO. Plus récemment, je me tourne vers
         des jeux solo comme ceux de FromSoftware, notamment Dark Souls I et III, Elden Ring, et très
         récemment Clair Obscur : Expedition 33. Tous ces jeux sont des jeux que j'ai plus ou moins{" "}
         <a

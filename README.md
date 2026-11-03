@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/public/apple-touch-icon-192x192.png" alt="SelectionQX Logo" width="256">
+    <img src="https://raw.githubusercontent.com/mqxewww/portfolio/refs/heads/main/public/apple-touch-icon-192x192.png" alt="Portfolio logo" width="256">
     <br>
     <h1>Portfolio</h1>
 </div>
